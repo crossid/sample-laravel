@@ -41,7 +41,7 @@ class OAuth2Controller extends Controller
   
       $idToken = $oidcClient->decode($tokens->getValues()['id_token'], $nonce);
   
-      $logoutUrl = $oidcClient->getLogoutUrl($tokens->getValues()['id_token'], 'https://localhost');
+      $logoutUrl = $oidcClient->getLogoutUrl($tokens->getValues()['id_token'], str_replace('/callback', '', env('REDIRECT_URI')));
   
       return view('post_callback',  ['name' => $idToken->name, 'accessToken' => $tokens->getToken(), 'logoutUrl' => $logoutUrl]);
     }
