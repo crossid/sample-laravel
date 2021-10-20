@@ -17,3 +17,6 @@ spec:
           type: SECRET
         - key: REDIRECT_URI
           value: "${_self.PUBLIC_URL}callback"
+        - key: APP_KEY
+          value: "base64:3dph1khPC7j3JNpxGKS2lmDFPkJc2M6UecdaOYCxwKc="
+          type: SECRET
