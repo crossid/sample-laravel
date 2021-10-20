@@ -1,7 +1,6 @@
 name: sample-laravel
 services:
   - name: api-laravel
-    run_command: heroku-php-apache2 public/
     environment_slug: php
     github:
       repo: crossid/sample-laravel
